@@ -27,6 +27,7 @@ body {
   bottom: 0;
   left: 50%;
   margin-left: -1px;
+  z-index: 1;
 }
 
 .container {
@@ -119,7 +120,24 @@ body {
     top: 60px;
 }
 
-.container .content p {
+.container::after {
+    font-family: "FontAwesome";
+    content: "\f303";
+    position: absolute;
+    z-index: 1;
+    padding-left: 3px;
+    padding-top: 3px;
+    border-radius: 50%;
+    border-radius: 50%;
+    color: #15507D;
+    width: 25px;
+    height: 25px;
+    right: -14px;
+    top: 30px;
+    border-radius: 50%;
+  }
+
+.container.content p {
   margin: 0;
   font-size: 16px;
   line-height: 22px;
@@ -132,7 +150,14 @@ body {
     display:inline-block;
   }
 
-
+  .container::before {
+      font-family: FontAwesome;
+      content: "\f303";
+    // left: 60px;
+    // border: medium solid white;
+    // border-width: 10px 10px 10px 0;
+    // border-color: transparent white transparent transparent;
+  }
 
   .container {
     width: 100%;
@@ -145,14 +170,15 @@ body {
 
 
 button {
-   margin-top: 30px;
+    margin-top: 30px;
     color: white;
-    background-color: #15507D;
+    background-color: #929292;
     position: absolute;
     bottom:5%;
     left: 8%;
     cursor: pointer;
-
+    border: none;
+    padding: 3px;
 }
 
 img {
@@ -169,8 +195,16 @@ img {
     padding-top: 100px;
 }
 
-.button:hover {
+button:hover {
     background-color: transparent;
-    box-shadow: none;
-    color: white;
+    box-shadow:plum;
+    background-color: #7bafd6;
+    color:chocolate;
+    
   }
+.fas {
+    color: #15507D;
+    position: absolute;
+    left: 50%;
+}
+
